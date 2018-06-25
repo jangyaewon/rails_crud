@@ -1,0 +1,20 @@
+<h1>Socar Index</h1>
+<table>
+    <thead>
+        <th>title</th>
+        <th>content</th>
+        <th col="3"></th>
+    </thead>
+    <tbody>
+        <% @socars.each do |socar| %>
+        <tr>
+            <td><%= socar.title %></td>
+            <td><%= socar.content %></td>
+            <td><%= socar.title %></td>
+    <a href="/socars/<%= socar.id %>"><%= socar.title %></a>
+    </tr>
+    <% end %>
+    </tbody>
+</table>
+    
+<%= link_to "새글쓰기", "/socars/new" %>
